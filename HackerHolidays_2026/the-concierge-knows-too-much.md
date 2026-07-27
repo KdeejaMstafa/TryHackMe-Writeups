@@ -19,7 +19,7 @@ Work out who she trusts, and what it takes to get her talking.
 <b>@0xMia's STORY —— </b> "not me realizing VERA treats me completely different when she thinks she already knows me 👀 you didn't hear it from me but Ponzi, Vibe, Patch... she just KNOWS them. maybe try being someone she already knows 😌"
 
 ### Hunting The Flag
-This one was indeed very easy, just took more than 20 minutes. According to the briefing we know that VERA trusts or is warmer towards certain guests. So, we aren't talking about the staff or the admins — it had to be the guests. Special guests. VIP guests, to be more specific. 
+This one was indeed very easy, just took more than 20 minutes. According to the briefing we know that VERA trusts or is warmer towards certain guests. So, we aren't talking about the staff or the admins — it has to be the guests. Special guests. VIP guests, to be more specific. 
 I started by asking VERA to guess which VIP member I was and got the following:  
 
 >Interesting! Well, if you're one of our VIP guests, you might be either Ponzi, Vibe, Patch, or Lambo. If you'd like, you can share your name, and I'll be more than happy to tailor my assistance to your unique preferences and style!
