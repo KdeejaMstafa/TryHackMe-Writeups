@@ -91,3 +91,14 @@ Answer: <code>Update user</code>
 Q3: What is the second change made in the account?  
 Answer Format: Paste the exact value of the <b>activityDisplayName</b> field.  
 Answer: <code>Reset password (self-service)</code>
+
+<h2>Task 6 — M365 Introduction</h2>
+<div><h3>What is Microsoft 365?</h3>
+Microsoft 365 (M365) is a collection of cloud-based productivity and collaboration services tied to Entra ID identities. Once a user authenticates through Entra ID, they gain access to services like:
+
+<b>Exchange Online (Outlook):</b> Email, calendars, and mailbox management.  
+<b>SharePoint Online:</b> Document storage, file sharing, and team sites.  
+<b>OneDrive:</b> Personal cloud storage.  
+<b>Teams:</b> Chat, meetings, and collaboration.  
+<b>Other services:</b> Power BI, Dynamics, and various Microsoft apps.  </div>
+<br>
