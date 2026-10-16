@@ -1,13 +1,12 @@
 <h1 align="center">M365 Monitoring Basics</h1>
 
 <h2>Task 2 — What are Identity Providers</h2>
-<h3><b>What is an Identity?</b></h3>
+<h3>What is an Identity?</h3>
 
 <div>
 A digital identity is a set of attributes that uniquely represent an entity within a computer system. That entity can be a person, a device, or a software component. Identities are used to authenticate entities, authorize their access to resources, enable communication, and support actions such as accessing services or performing transactions.
 
 At a high level, identities can be grouped into three categories:
-
 
 <b>Human identities:</b> Represent people, such as employees, contractors, partners, or customers.<br>
 <b>Workload identities:</b> Represent software components, including applications, services, scripts, or containers, that need to authenticate to other systems.<br>
@@ -25,16 +24,41 @@ Q2: What type of identity is a server account?
 Answer: <code>Device</code>  
 
 <h2>Task 3 — Identities as the Target</h2>
-<b>Questions</b>
+<h3>Why Attackers Are Targeting Cloud Credentials</h3>
+Attackers target cloud-based identity providers because they provide:
 
+- <b>Remote access from anywhere:</b> Authentication occurs over the internet, so attackers don’t need access to the internal network.
+- <b>Legitimate access to multiple services via SSO:</b> One successful sign-in can unlock emails, files, chat, and connected apps for a user.
+- <b>Out of the radar of traditional tools:</b> Firewalls and endpoint tools may see nothing suspicious because the attacker is using valid credentials or the authentication is occurring outside of their visibility.
+- <b>Direct access to high-value resources:</b> Email and collaboration platforms contain sensitive data, internal communication, and often allow resetting account credentials and other authentication factors.
+  
+Entra ID has plenty of features to better protect identities within a tenant and prevent attackers from being successful. This leads to another important question: “If Entra ID is so secure, how do these attacks still work?”
+<br><br>
+<b>Questions</b>  
 Q1: What authentication resource can prevent attackers from authenticating with only a stolen password?  
 Answer: <code>MFA</code>  
 Q2: What can help us detect and monitor cloud identity threats?  
 Answer: <code>Logs</code>  
 
 <h2>Task 4 — Entra ID Sign-in Logs</h2>
-<b>Questions</b>
+<h3>Entra ID Core Components</h3>
+Before we explore the logs, let's understand the key components that generate them:  
+<b>Users and Sign-ins (Authentication)</b>  
+Every time a user attempts to authenticate to any service protected by Entra ID, a record is created. This includes successful logins, failed attempts, MFA challenges, and the context around each event (IP address, location, device, application, and others).  
 
+<b>Roles and Access Decisions (Authorization)</b>  
+After authentication, Entra ID determines what the user is allowed to do based on their assigned roles and permissions. Changes to these roles, group memberships, or permissions are all logged in audit events.  
+
+<b>Security Features</b>
+
+Entra ID includes built-in security capabilities that generate their own logs:
+
+- Multi-factor authentication (MFA): Logs show whether MFA was required, prompted, satisfied, or bypassed.  
+- Conditional Access policies: These policies enforce rules like "require MFA from untrusted locations." Logs show which policies were applied and their outcomes (allowed, blocked, MFA required).  
+- Identity Protection: Entra ID's native threat detection flags risky sign-ins (impossible travel, anonymous IP, password spray) and risky users. We won't dive deep into these in this room, but we will see how these logs can help us identify threats in the next room, Entra ID Monitoring.  
+
+
+<b>Questions</b>  
 Q1: What is the email address of the compromised identity?  
 Answer: <code>allan.smith@finegalo.thm</code>  
 Q2: What is the IP address used by the attacker?  
@@ -49,7 +73,15 @@ Answer Format: The exact value of the <b>appDisplayName</b> field.
 Answer: <code>One Outlook Web</code>  
 
 <h2>Task 5 — Entra ID Audit Logs</h2>
-<b>Questions</b>
+Audit logs capture administrative actions and changes made within the Entra ID environment. Below are some examples of post-compromise activities an attacker can perform, and you can hunt with logs:
+
+- Resetting passwords to maintain access
+- Adding new MFA methods or devices
+- Assigning privileged roles to escalate access
+- Modifying user attributes
+- Registering malicious applications
+<br>
+<b>Questions</b>  
 
 Q1: What was the first change made by the attacker in the compromised user account?  
 Answer Format: Paste the exact value of <b>activityDisplayName</b>  
