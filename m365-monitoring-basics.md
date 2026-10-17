@@ -102,3 +102,42 @@ Microsoft 365 (M365) is a collection of cloud-based productivity and collaborati
 <b>Teams:</b> Chat, meetings, and collaboration.  
 <b>Other services:</b> Power BI, Dynamics, and various Microsoft apps.  </div>
 <br>
+<h2>Task 7 — M365 Audit Logs</h2>
+<h3>Hunting for Post-Compromise M365 Activities</h3>
+For your investigation into M365 logs, identifying suspicious activities on the compromised account is essential. You will further explore these attackers' techniques in this module. For now, here are some common post-compromise activities you should be aware of:  
+
+Mailbox Manipulation:
+
+- Creation of inbox rules to delete, forward, or move emails
+- Mass email deletion or moves to the deleted items
+- Emails sent to external addresses
+- Access from unusual IP addresses or locations  
+
+File Operations:
+
+- Mass file downloads from SharePoint or OneDrive
+- Access to sensitive or executive-level documents
+- File sharing to external domains
+- Downloads of files the user wouldn't normally access
+<br>
+<b>Questions</b>  
+
+Q1: What is the application used by the attacker?  
+Answer Format: Paste the exact value of the <b>Workload</b> field.  
+Answer: <code>Exchange</code>  
+
+Q2: What is the change made in the user application by the attacker?    
+Answer Format: Paste the exact value of the <b>Operation</b> field.  
+Answer: <code>New-InboxRule</code>  
+
+Q3: What is the subject of the email message sent by the attacker?   
+Answer: <code>URGENT: Approval for new internal VPN Access</code>  
+
+Q4: When did the attacker access the response to the message?  
+Answer Format: 1/12/25 1:15:00.000 PM  
+(Exact Splunk <b>Time</b> value)  
+Answer: <code>2/11/26 6:20:09.000 PM</code>  
+
+Q5: Which path was the response stored in?  
+Answer Format: \PathName  
+Answer: <code>\Deleted Items</code>  
